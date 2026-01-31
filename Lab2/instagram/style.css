@@ -4,3 +4,99 @@
 body{
     background-color: #ffffff;
 }
+
+.main{
+    display: flex;
+}
+
+.left{
+    flex: 1;
+    
+}
+
+.right{
+    flex: 1;
+}
+
+#log-pic{
+    margin-top: 100px;
+    margin-left: 25%;
+    width: 522px;
+    height: 450px;
+}
+
+#inst-logo{
+    width: 175px;
+    height: 51px;
+    margin-right: 6.5%;
+}
+
+.reg{
+    margin-top: 20%;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    width: 350px;
+    height: 407px;
+    padding: 10px 0px 24px;
+    border: 1px none;
+    border-radius: 8px;
+    border-color: #dddfe2;
+    text-align: center;
+}
+
+.enter-and-pas{
+    background-color: #f3f5f7;
+    font: inherit;
+    width: 260px;
+    height: 16px;
+    padding: 14px;
+    border-radius: 4px;
+    border: 1px solid #dddfe2;
+    margin: 10px auto;
+}
+
+.text-inp{
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    outline: none;
+    background-color: #f3f5f7;
+}
+
+.log-but{
+    background-color: #7f8dfa;
+    font-size: 18px;
+    width: 252px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    line-height: 48px;
+    box-sizing: content-box;
+    margin-top: 8px;
+    margin-bottom:8px ;
+    padding: -4px 0px 10px 0px;
+}
+
+a{
+    text-decoration: none;
+    border-bottom: 1px black;
+}
+
+#fc-pic{
+    width: 20px;
+    height: 20px;
+}
+#fc-line{
+    margin-left: -35%;
+    margin-bottom: 20px;
+}
+#log-fc{
+    font-weight: 500;
+    position: absolute;
+    font-size: 14px;
+    color:blue;
+    text-align: center;
+}
