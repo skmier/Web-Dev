@@ -1,0 +1,35 @@
+body{
+    background-color: aqua;
+    font-family: Arial;
+}
+
+h1{
+    color: red;
+    font-size:60px;
+}
+
+#link{
+    text-decoration: none;
+    color: green;
+}
+
+.tb{
+    border: 2px dashed black;
+}
+
+#link:hover{
+    color: red;
+}
+li{
+    background-color: yellow;
+    color: brown;
+    border: solid 1px black;
+}
+
+#ollist li:nth-child(even){
+    background-color: blueviolet;
+}
+
+#ollist li:nth-child(odd){
+    background-color: burlywood;
+}
