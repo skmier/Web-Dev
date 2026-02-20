@@ -1,0 +1,150 @@
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+.gallery-container {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.main-image {
+  width: 100%;
+  height: 250px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fdfdfd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+  display: block;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  height: 55px; 
+}
+
+.thumb-img {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: border-color 0.2s;
+  background: white;
+}
+
+.thumb-img:hover {
+  border-color: #ccc;
+}
+
+.thumb-img.active {
+  border-color: #0089d0; 
+}
+
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #333;
+  height: 2.6rem;
+  overflow: hidden;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.rating {
+  color: #ffc107;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+
+.share-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.btn-wa, .btn-tg {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-wa { background: #25D366; }
+.btn-tg { background: #0088cc; }
+
+.buy-btn {
+  background: #e11c21;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.buy-btn:hover {
+  background: #c8181d;
+}

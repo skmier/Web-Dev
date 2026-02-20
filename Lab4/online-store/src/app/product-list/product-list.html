@@ -1,0 +1,41 @@
+<div class="product-grid">
+  @for (item of products; track item.id) {
+    <div class="product-card">
+      
+      <div class="gallery-container">
+        <div class="main-image">
+          <img [src]="selectedImages[item.id] || item.image" [alt]="item.name">
+        </div>
+        <div class="thumbnails">
+          @for (img of item.images; track $index) {
+            <img 
+              [src]="img" 
+              (click)="changeImage(item.id, img)" 
+              [class.active]="(selectedImages[item.id] || item.image) === img"
+              class="thumb-img">
+          }
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h3>{{ item.name }}</h3>
+        <p class="description">{{ item.description }}</p>
+        
+        <div class="rating">
+          @for (s of getStars(item.rating); track $index) { ⭐ }
+          <span class="rating-text">{{ item.rating }}</span>
+        </div>
+
+        <div class="price">{{ item.price | number }} ₸</div>
+
+        <div class="share-box">
+          <span>Поделиться:</span>
+          <button (click)="shareToWhatsApp(item.link)" class="btn-wa">WhatsApp</button>
+          <button (click)="shareToTelegram(item.link, item.name)" class="btn-tg">Telegram</button>
+        </div>
+
+        <a [href]="item.link" target="_blank" class="buy-btn">Купить на Kaspi</a>
+      </div>
+    </div>
+  }
+</div>
