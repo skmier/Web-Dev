@@ -42,3 +42,32 @@ toDoList.addEventListener('click', function (e) {
         e.target.parentElement.remove();
     }
 });
+
+function filterTasks(filter) {
+    const tasks = toDoList.querySelectorAll('li'); 
+    tasks.forEach(task => {
+        switch (filter) {
+            case 'all':
+                task.style.display = 'flex';
+                break;
+            case 'active':
+                if (task.classList.contains('checked')) {
+                    task.style.display = 'none';
+                } else {
+                    task.style.display = 'flex';
+                }
+                break;
+            case 'completed':
+                if (task.classList.contains('checked')) {
+                    task.style.display = 'flex';
+                } else {
+                    task.style.display = 'none';
+                }
+                break;
+        }
+    });
+} ;
+
+document.getElementById('all').addEventListener('click', () => filterTasks('all'));
+document.getElementById('active').addEventListener('click', () => filterTasks('active'));
+document.getElementById('completed').addEventListener('click', () => filterTasks('completed'));

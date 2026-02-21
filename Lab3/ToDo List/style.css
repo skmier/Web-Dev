@@ -84,6 +84,7 @@ header {
 .todo-list li.checked .task-text {
     text-decoration: line-through;
     opacity: 0.6;
+    background:  rgba(135, 231, 11, 0.601);
 }
 
 .delete {
@@ -93,3 +94,20 @@ header {
     cursor: pointer;
     user-select: none;
 }
+
+.filter-btn {
+    height: 30px;
+    width: 80px;
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: rgb(54, 128, 232);
+    color: white;
+    border: none;
+}   
+

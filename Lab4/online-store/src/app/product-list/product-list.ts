@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product.model';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, ],
+  imports: [CommonModule, FormsModule ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
-export class ProductList {
+export class ProductList implements OnInit {
+    searchQuery: string = '';
+    filteredProducts:Product[] = []
     selectedImages: { [key: number]: string } = {};
     products : Product[]=[ 
       {
@@ -150,9 +153,16 @@ export class ProductList {
   ];
 
   ngOnInit() {
+    this.filteredProducts = [...this.products];
     this.products.forEach(p => {
       this.selectedImages[p.id] = p.image;
     });
+  }
+  filterProducts(): void {
+    const query = this.searchQuery.toLowerCase(); 
+    this.filteredProducts = this.products.filter(product =>
+      product.name.toLowerCase().includes(query) 
+    );
   }
 
   changeImage(productId: number, imageUrl: string) {

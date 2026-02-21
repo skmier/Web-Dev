@@ -1,7 +1,25 @@
+<h1>Meir`s  Online-Store</h1>
+
+<div class="search-wrapper">
+  <div class="search-container">
+    <label for="search">Search products</label>
+    <input
+      id="search"
+      type="text"
+      [(ngModel)]="searchQuery" 
+      (input)="filterProducts()" 
+      placeholder="Search by product name..."
+      class="search-input"
+    />
+  </div>
+  <div class="search-stats">
+  Showing: {{ filteredProducts.length }} / {{ products.length }} products
+</div>
+</div>
+
 <div class="product-grid">
-  @for (item of products; track item.id) {
+  @for (item of filteredProducts; track item.id) {
     <div class="product-card">
-      
       <div class="gallery-container">
         <div class="main-image">
           <img [src]="selectedImages[item.id] || item.image" [alt]="item.name">
@@ -29,12 +47,12 @@
         <div class="price">{{ item.price | number }} ₸</div>
 
         <div class="share-box">
-          <span>Поделиться:</span>
+          <span>Share:</span>
           <button (click)="shareToWhatsApp(item.link)" class="btn-wa">WhatsApp</button>
           <button (click)="shareToTelegram(item.link, item.name)" class="btn-tg">Telegram</button>
         </div>
 
-        <a [href]="item.link" target="_blank" class="buy-btn">Купить на Kaspi</a>
+        <a [href]="item.link" target="_blank" class="buy-btn">Buy</a>
       </div>
     </div>
   }
