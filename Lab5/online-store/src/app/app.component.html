@@ -1,0 +1,34 @@
+<h1>Meir`s Store</h1>
+  <div class="search-wrapper">
+  <div class="search-container">
+    <label for="search">Search products</label>
+    <input
+      id="search"
+      type="text"
+      [(ngModel)]="searchText" 
+      (input)="applyFilters()" 
+      placeholder="Search by product name..."
+      class="search-input"
+    />
+  </div>
+  
+</div>
+
+<div class="categories">
+
+  <button
+    (click)="showAll()"
+    [class.active]="selectedCategoryId === null">
+    All
+  </button>
+
+  @for (cat of categories; track cat.id) {
+    <button
+      (click)="selectCategory(cat.id)"
+      [class.active]="cat.id === selectedCategoryId">
+      {{ cat.name }}
+    </button>
+  }
+</div>
+
+<app-product-list [products]="products"></app-product-list>

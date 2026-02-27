@@ -356,4 +356,7 @@ export class ProductService {
     return this.products.filter(p => p.categoryId === categoryId);
   }
 
+  getAllProducts(): Product[] {
+  return this.products;
+}
 }
