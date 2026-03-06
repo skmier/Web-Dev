@@ -2,6 +2,7 @@
 @for (product of products; track product.id) {
   <app-product-item
     [product]="product"
-    (delete)="removeProduct($event)">
+    (delete)="removeProduct($event)"
+    (toggleFavorite)="toggleFavorite.emit($event)">
   </app-product-item>
 }</div>

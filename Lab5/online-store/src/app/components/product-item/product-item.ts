@@ -11,7 +11,7 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./product-item.css']
 })
 export class ProductItemComponent implements OnInit {
-
+  @Output() toggleFavorite = new EventEmitter<number>();
   @Input() product!: Product;
   @Output() delete = new EventEmitter<number>();
   currentImageIndex: number = 0;
@@ -57,4 +57,8 @@ prevImage() {
     const text = encodeURIComponent(this.product.name);
     window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
   }
+
+  onToggleFavorite() {
+  this.toggleFavorite.emit(this.product.id);
+}
 }

@@ -17,6 +17,7 @@ export class ProductService {
 
   products : Product[]=[ 
       {
+        isfavorite: false,
       categoryId: 1,
       likes: 0,
       id: 1,
@@ -34,6 +35,7 @@ export class ProductService {
     }, 
 
     {
+       isfavorite: false,
       categoryId: 1,
       likes: 0,
       id: 2,
@@ -50,7 +52,7 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/samsung-galaxy-s25-5g-12-gb-256-gb-sinii-133432433/?c=750000000'
     }, 
 
-    {
+    { isfavorite: false,
       categoryId: 1,
       likes: 0,
       id: 3,
@@ -67,6 +69,7 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/realme-note-70-6-gb-128-gb-zolotistyi-145564514/?c=750000000'
     },
     {
+       isfavorite: false,
       categoryId: 1,
       likes: 0,
       id: 4,
@@ -83,6 +86,7 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/oppo-a78-8-gb-256-gb-chernyi-112808573/?c=750000000'
     },
     {
+       isfavorite: false,
       categoryId: 2,
       likes: 0,
       id: 5,
@@ -101,6 +105,7 @@ export class ProductService {
     
 
     {
+       isfavorite: false,
       categoryId: 2,
       likes: 0,
       id: 6,
@@ -118,7 +123,8 @@ export class ProductService {
     },
 
     {
-      categoryId: 3,
+       isfavorite: false,
+      categoryId: 4,
       likes: 0,
       id: 7,
       name: 'Планшет Apple iPad A16 11 2025 Wi-Fi 11 дюйм 6 Гб/128 Гб ',
@@ -135,6 +141,7 @@ export class ProductService {
     },
 
     {
+       isfavorite: false,
       categoryId: 1,
       likes: 0,
       id: 8,
@@ -151,7 +158,8 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/apple-iphone-13-128gb-chernyi-102298404/?c=750000000',
     },
     {
-      categoryId: 4,
+       isfavorite: false,
+      categoryId: 3,
       likes: 0,
       id: 9,
       name: "Наушники Apple EarPods USB-C белый",
@@ -168,7 +176,8 @@ export class ProductService {
     },
 
      {
-      categoryId: 4,
+       isfavorite: false,
+      categoryId: 3,
       likes: 0,
       id: 10,
       name: "Наушники Air pro 2 белый",
@@ -184,7 +193,8 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/naushniki-air-pro-2-belyi-118366664/?c=750000000',
     },
     {
-      categoryId: 4,
+       isfavorite: false,
+      categoryId: 3,
       likes: 0,
       id: 11,
       name: "Наушники HYDRA Home Minor",
@@ -200,8 +210,8 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/naushniki-hydra-home-minor-bezhevyi-120724130/?c=750000000',
     },
 
-    {
-      categoryId: 4,
+    { isfavorite: false,
+      categoryId: 3,
       likes: 0,
       id: 12,
       name: "Наушники Apple AirPods 4 белый",
@@ -218,7 +228,8 @@ export class ProductService {
     },
 
      {
-      categoryId: 4,
+       isfavorite: false,
+      categoryId: 3,
       likes: 0,
       id: 13,
       name: 'Наушники JASPER JS70 ',
@@ -234,8 +245,8 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/naushniki-jasper-js70-bezhevyi-146025818/?c=750000000',
     },
 
-    {
-      categoryId: 3,
+    {isfavorite: false,
+      categoryId: 4,
       likes: 0,
       id: 14,
       name: 'Планшет Xiaomi Redmi Pad 2 11 дюйм 8 Гб/256 Гб ',
@@ -251,7 +262,8 @@ export class ProductService {
     },
 
     {
-      categoryId: 3,
+      isfavorite: false,
+      categoryId: 4,
       likes: 0,
       id: 15,
       name: 'Планшет Huawei MatePad 11,5 S 2026 Papermatte + подарок 11.5 дюйм 12 Гб/256 Гб ',
@@ -267,7 +279,8 @@ export class ProductService {
     },
 
      {
-      categoryId: 3,
+      isfavorite: false,
+      categoryId: 4,
       likes: 0,
       id: 16,
       name: 'Планшет G-VIIL G2000 10 дюйм 16 Гб/512 Гб',
@@ -283,7 +296,8 @@ export class ProductService {
     },
 
      {
-      categoryId: 3, 
+      isfavorite: false,
+      categoryId: 4,
       likes: 0,
       id: 17,
       name: 'Планшет Samsung Galaxy Tab A9 LTE 8.7 дюйм 4 Гб/64 Гб',
@@ -300,6 +314,7 @@ export class ProductService {
 
     
     {
+      isfavorite: false,
       categoryId: 2,
       likes: 0,
       id: 18,
@@ -315,6 +330,7 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/hydra-home-h20-15-6-12-gb-ssd-512-gb-win-11-mkii-115019992/?c=750000000'
     },
     {
+      isfavorite: false,
       categoryId: 2,
       likes: 0,
       id: 19,
@@ -331,6 +347,7 @@ export class ProductService {
     },
 
     {
+      isfavorite: false,
       categoryId: 2,
       likes: 0,
       id: 20,

@@ -31,4 +31,22 @@
   }
 </div>
 
-<app-product-list [products]="products"></app-product-list>
+<h2>⭐ Favorites ({{ favorites.length }})</h2>
+
+<div class="favorites-wrapper">
+  <div class="favorites-list">
+@if (favorites.length > 0) {
+  @for (product of favorites; track product.id) {
+    <app-product-item
+      [product]="product"
+      (toggleFavorite)="toggleFavorite($event)">
+    </app-product-item>
+  }
+}
+  </div>
+</div>
+
+<app-product-list
+  [products]="products"
+  (toggleFavorite)="toggleFavorite($event)">
+</app-product-list>

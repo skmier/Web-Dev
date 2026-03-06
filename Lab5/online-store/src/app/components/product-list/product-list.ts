@@ -4,6 +4,7 @@ import { Product } from '../../model/Product';
 import { ProductItemComponent } from '../../components/product-item/product-item';
 import { ProductService } from '../../services/product';
 import { Category } from '../../model/Category';
+import { Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-product-list',
   standalone: true,
@@ -14,7 +15,7 @@ import { Category } from '../../model/Category';
 export class ProductListComponent {
 
   @Input() products: Product[] = [];
-
+  @Output() toggleFavorite = new EventEmitter<number>();
   removeProduct(id: number) {
     this.products = this.products.filter(p => p.id !== id);
   }

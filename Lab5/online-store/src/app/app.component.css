@@ -95,3 +95,28 @@ app-product-list {
   box-sizing: border-box; 
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
+
+h2 {
+  margin: 30px 20px 10px;
+  font-size: 20px;
+}
+
+.favorites-wrapper {
+  border: 2px solid ;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 20px 30px;
+}
+
+.favorites-list {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.favorites-list app-product-item {
+  flex: 0 0 280px;
+  display: block;
+  width: auto;          
+}
