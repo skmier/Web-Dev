@@ -2,6 +2,7 @@ import json
 import os
 from models import Task, TaskManager
 
+
 def load_tasks(filename: str) -> list:
     if not os.path.exists(filename):
         return []
