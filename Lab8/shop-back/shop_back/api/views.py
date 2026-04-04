@@ -7,11 +7,28 @@ def home(request):
 
 
 def allProducts(request):
-    data = [p.to_json() for p in Product.objects.all()]
+    products = Product.objects.all()
+
+    category_id = request.GET.get('category')
+    active = request.GET.get('active')
+    search = request.GET.get('search')
+
+    if category_id:
+        products = products.filter(category_id=category_id)
+
+    if active is not None:
+        is_active_val = active.lower() == 'true'
+        products = products.filter(is_active=is_active_val)
+
+    if search :
+        products = products.filter(name__icontains=search)
+
+    data = [p.to_json() for p in products]
+
     return JsonResponse(data,safe=False,json_dumps_params={
-            'ensure_ascii': False,
-            'indent': 4
-        })
+        'ensure_ascii': False,
+        'indent': 4})
+
 
 def getProductById(request,id):
     try:
@@ -53,9 +70,5 @@ def allProductsByCategory(request,id):
         'ensure_ascii': False,
         'indent': 4
     })
-    # try:
-    #     category = Category.objects.get(id=id)
-    # except Category.DoesNotExist:
-    #     return JsonResponse({"error": "Category not found"}, status=404)
-    # data = [p.to_json() for p in Product.objects.filter(category=category).all()]
-    # return JsonResponse(data, safe=False)
+
+
