@@ -15,5 +15,5 @@ urlpatterns = [
     #
     # path('categories/<int:id>/', views.getCategoryById, name='category_by_id'),
 
-    path('categories/<int:id>/products/', views.allProductsByCategory, name='products_by_category'),
+    # path('categories/<int:id>/products/', views.allProductsByCategory, name='products_by_category'),
 ]
